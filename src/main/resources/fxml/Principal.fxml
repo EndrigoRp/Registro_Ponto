@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="registroponto.controller.PrincipalController"
+           prefWidth="1000" prefHeight="700"
+           stylesheets="@../css/style.css">
+
+    <VBox spacing="14" alignment="TOP_LEFT"
+          StackPane.alignment="TOP_LEFT"
+          style="-fx-padding: 60 0 0 60;" maxWidth="880">
+
+        <Label text="Registro de Ponto - Judô" styleClass="label-title"/>
+        <Label fx:id="lblUsuario" styleClass="label"/>
+        <Label fx:id="lblIndicador" styleClass="label"/>
+        <Label fx:id="lblHoraData" styleClass="label-clock"/>
+
+        <Button fx:id="btnPonto" text="Registrar Entrada" onAction="#handlePonto" styleClass="button-small"/>
+
+        <TableView fx:id="tblRegistros" prefHeight="400" prefWidth="880">
+            <columns>
+                <TableColumn fx:id="colEntrada" text="🟢 Entrada" prefWidth="280"/>
+                <TableColumn fx:id="colSaida" text="🔴 Saída" prefWidth="280"/>
+                <TableColumn fx:id="colDuracao" text="⏱️ Duração" prefWidth="320"/>
+            </columns>
+        </TableView>
+
+        <Button fx:id="btnLogout" text="Logout" onAction="#handleLogout" styleClass="button-small"/>
+    </VBox>
+</StackPane>

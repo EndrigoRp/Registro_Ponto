@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="registroponto.controller.UsuariosController"
+           prefWidth="1000" prefHeight="700"
+           stylesheets="@../css/style.css">
+
+    <VBox spacing="12" alignment="TOP_LEFT"
+          StackPane.alignment="TOP_LEFT"
+          style="-fx-padding: 60 0 0 60;" maxWidth="900">
+
+        <Label text="Gerenciamento de Usuários" styleClass="label-title"/>
+
+        <GridPane hgap="10" vgap="10">
+            <columnConstraints>
+                <ColumnConstraints minWidth="100"/>
+                <ColumnConstraints minWidth="250"/>
+            </columnConstraints>
+
+            <Label text="Nome:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtNome" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="Login:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtLogin" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Senha:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <PasswordField fx:id="txtSenha" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Perfil:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="cbPerfil" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <HBox spacing="10">
+            <Button text="Novo" onAction="#handleNovo" styleClass="button-small"/>
+            <Button text="Editar" onAction="#handleEditar" styleClass="button-small"/>
+            <Button text="Excluir" onAction="#handleExcluir" styleClass="button-small"/>
+            <Button text="Salvar" onAction="#handleSalvar" styleClass="button-small"/>
+            <Button text="Cancelar" onAction="#handleCancelar" styleClass="button-small"/>
+        </HBox>
+
+        <TableView fx:id="tblUsuarios" prefWidth="880" prefHeight="340">
+            <columns>
+                <TableColumn fx:id="colNome" text="Nome" prefWidth="300"/>
+                <TableColumn fx:id="colLogin" text="Login" prefWidth="300"/>
+                <TableColumn fx:id="colPerfil" text="Perfil" prefWidth="280"/>
+            </columns>
+        </TableView>
+    </VBox>
+</StackPane>

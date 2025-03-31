@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="registroponto.controller.LoginController"
+           prefWidth="1000" prefHeight="700"
+           stylesheets="@../css/style.css">
+
+    <VBox spacing="10" alignment="TOP_LEFT"
+          StackPane.alignment="TOP_LEFT"
+          style="-fx-padding: 80 0 0 80;" maxWidth="320">
+
+        <Label text="Registro de Ponto - Judô" styleClass="label-title"/>
+        <Label fx:id="lblErro" text="" styleClass="label-error" visible="false" prefWidth="280"/>
+
+        <TextField fx:id="txtUsuario" promptText="Usuário" styleClass="input-field" prefWidth="280"/>
+        <PasswordField fx:id="txtSenha" promptText="Senha" styleClass="input-field" prefWidth="280"/>
+
+        <Button text="Entrar" onAction="#handleLogin" styleClass="button-small"/>
+        <Button text="Registrar" onAction="#handleRegistrar" styleClass="button-small"/>
+    </VBox>
+</StackPane>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="registroponto.controller.CadastroController"
+           prefWidth="1000" prefHeight="700"
+           stylesheets="@../css/style.css">
+
+    <VBox spacing="10" alignment="TOP_LEFT"
+          StackPane.alignment="TOP_LEFT"
+          style="-fx-padding: 80 0 0 80;" maxWidth="320">
+
+        <Label text="Cadastro de Usuário" styleClass="label-title"/>
+        <Label fx:id="lblErro" text="" styleClass="label-error" visible="false" prefWidth="280"/>
+
+        <TextField fx:id="txtNome" promptText="Nome completo" styleClass="input-field" prefWidth="280"/>
+        <TextField fx:id="txtLogin" promptText="Login" styleClass="input-field" prefWidth="280"/>
+        <PasswordField fx:id="txtSenha" promptText="Senha" styleClass="input-field" prefWidth="280"/>
+        <ComboBox fx:id="cbPerfil" promptText="Perfil" prefWidth="280"/>
+
+        <Button text="Cadastrar" onAction="#handleCadastrar" styleClass="button-small"/>
+        <Button text="Voltar" onAction="#handleVoltar" styleClass="button-small"/>
+    </VBox>
+</StackPane>

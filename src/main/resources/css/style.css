@@ -1,0 +1,51 @@
+.root {
+    -fx-background-image: url("../images/judo_background.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center center;
+    -fx-background-size: cover; /* ou 'contain' se quiser a imagem inteira sempre */
+    -fx-font-family: "Arial", sans-serif;
+}
+
+/* Títulos */
+.label-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f0f0f0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 2, 0, 1, 1);
+}
+
+/* Campos */
+.input-field, .text-field, .password-field, .combo-box {
+    -fx-background-color: rgba(255,255,255,0.95);
+    -fx-border-color: #cccccc;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 6px;
+    -fx-font-size: 14px;
+}
+
+/* Botões pequenos */
+.button-small {
+    -fx-background-color: linear-gradient(to bottom, #e6e6e6, #cfcfcf);
+    -fx-text-fill: #1c1c1c;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 4px 10px;
+    -fx-pref-width: 140;
+    -fx-pref-height: 28;
+}
+
+.button-small:hover {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #dddddd);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+/* Erros */
+.label-error {
+    -fx-text-fill: #ff4c4c;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
